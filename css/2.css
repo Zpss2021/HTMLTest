@@ -1,0 +1,28 @@
+/* 通配符选择器，用于选中页面中的所有标签 */
+/* @更改全局背景色，实现护眼效果： */
+* {
+    background-color: darkseagreen;
+    color: white;
+}
+/* @多用于去除所有标签的默认margin和padding： */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* id选择器，选择一个页面中唯一对应id的标签	*/
+#red {
+    color: red;
+}
+
+/* class选择器，选择一个页面中所有包含该class的标签 */
+.black_white_box {
+    color: white;
+    background-color: black; /* 背景颜色 */
+    width: 4em; /* 盒子模型宽度 */
+    height: 4em; /* 盒子模型高度 */
+}
+
+.px20 {
+    font-size: 20px; /* 文字大小 */
+}

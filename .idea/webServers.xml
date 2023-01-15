@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="dbd88c14-b23d-4b1b-85d8-b309b161a5c6" name="zpss.info" url="http://zpss.info">
+        <fileTransfer rootFolder="/root/HTMLTest" accessType="SFTP" host="zpss.info" port="22" sshConfigId="66e1f6e3-6b0c-4766-a28b-0723b4749c28" sshConfig="root@zpss.info:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

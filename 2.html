@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test 2</title>
+	<!-- 外联式CSS -->
+	<link rel="stylesheet" href="./css/2.css">
+	<!-- 内嵌式CSS -->
+	<style>
+		/* 导入式CSS ：
+			@import "./css/2.css";
+		*/
+		/* 标签选择器，选中所有相应标签 */
+        p {
+            color: blue; /* 文字颜色 */
+        }
+	</style>
+</head>
+<body>
+	默认样式的一句话
+	<p>p标签样式的一个段落</p>
+	<p>p标签样式的一个段落</p>
+	<!-- 行内式CSS -->
+	<p style="color:green">设置行内样式的一个段落</p>
+
+	<!-- 设置类名，供类选择器使用 -->
+	<div class="black_white_box">Github</div>
+	<br>
+	<!-- @类名可以相同，相同类的样式相同 -->
+	<!-- @一个标签可以有多个类名，用空格分隔，效果叠加 -->
+	<div class="black_white_box px20">黑底白字</div>
+
+	<!-- 设置id名，供id选择器使用  -->
+	<!-- @id选择器和类选择器可同时使用，效果叠加  -->
+	<div id="red" class="px20">20px的red</div>
+	<!-- @标签id一个页面中不可相同，以下代码错误 -->
+	<!-- <div id="red">另一个red</div> -->
+</body>
+</html>

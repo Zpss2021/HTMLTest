@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test 0</title>
+</head>
+<!-- 内容：标题、段落、文字效果、换行、水平分割线、图片、音频、视频、超链接 -->
+<body>
+	<a href="./index.html">首页</a>
+	<!-- 标题 Header -->
+	<h1>HTML学习</h1>
+	<h2>二级标题</h2>
+	<h3>三级标题</h3>
+	<!-- 水平分割线 Horizontal Rule -->
+	<hr>
+	<!-- 段落 Paragraph-->
+	<p>第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段第一段</p>
+	<p>第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段第二段</p>
+	<p>第三段第三段第三段第三段第三段第三段第三段第三段第三段<br>第三段第三段第三段第三段第三段第三段第三段第三段第三段</p>
+	<hr>
+	<!-- 文字效果 -->
+	<!-- Bold / strong text -->
+	<b>加粗</b>
+	<strong>加粗</strong>
+	<!-- Italic / emphasized text -->
+	<i>倾斜</i>
+	<em>倾斜</em>
+	<!-- Underlined / inserted text-->
+	<u>下划线</u>
+	<ins>下划线</ins>
+	<!-- Strikethrough / deleted text -->
+	<s>删除线</s>
+	<del>删除线</del>
+	<b><i><u><s>嵌套效果</s></u></i></b>
+	<!-- 换行 BR-eak -->
+	<br>
+	<!-- 图片 img (image)
+		src:   图片文件URL
+		alt:   替换文本(图片显示失败时显示)
+		title:  提示文本(鼠标悬停时显示)
+		width:  宽度（单独设定时等比缩放）
+		height: 高度（单独设定时等比缩放）
+	-->
+	<img src="./image/baidu_icon.png" title="Local Tieba Icon" alt="Tieba" width="60">
+	<img src="https://browser2.qhimg.com/t019687ca0b4a3deff7.png" title="Remote GitHub Icon" alt="Github" height="60">
+	<!-- 分割 div Division-->
+	<div id="minecraft_song">
+		<img src="./image/minecraft_alpha_pic.jpg" width="120" height="120" alt="Minecraft Alpha">
+		<!-- 音频 audio
+				src:   音频文件URL
+				controls: 显示播放控件
+				autoplay: 自动播放
+				loop:   循环播放
+		-->
+		<audio src="./audio/Alpha.mp3" controls>浏览器不支持audio标签</audio>
+	</div>
+	<!-- 视频 video
+		src:   音频文件URL
+		controls: 显示播放控件
+		autoplay: 自动播放
+		muted:  静音播放
+		loop:   循环播放
+		width:  播放控件宽度
+		height: 播放控件高度
+	-->
+	<video src="./video/HelloWorld.mp4" controls height="300">浏览器不支持video标签</video>
+	<video src="./video/HelloWorld.mp4" controls height="300">浏览器不支持video标签</video>
+	<video src="./video/HelloWorld.mp4" controls height="300">浏览器不支持video标签</video>
+	<video src="./video/HelloWorld.mp4" controls height="300">浏览器不支持video标签</video>
+	<video src="./video/HelloWorld.mp4" controls height="300">浏览器不支持video标签</video>
+	<br>
+	<!-- 超链接 a (Anchor 锚）
+		href:   URL或锚链接(建议默认值空链接"#") hypertext reference
+		target: 规定URL打开方式（*_self/_blank/_parent/_top)
+	-->
+	<a href="https://www.baidu.com" target="_blank">百度一下</a>
+	<a href="#minecraft_song">跳转到Minecraft Alpha</a>
+	<a href="./1.html">下一页</a>
+	<footer>
+		<div style="width:300px;margin:0 auto; padding:20px 0;">
+			<p align="center">Zpss&copy版权所有</p>
+			<a target="_blank" href="https://beian.miit.gov.cn/"
+			   style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+				<p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">
+					备案号：豫ICP备2022027732号-1</p>
+			</a>
+		</div>
+		<!--	<div style="width:300px;margin:0 auto; padding:20px 0;">-->
+		<!--		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41102402000XXX" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">-->
+		<!--			<img src="./image/beian.png" style="float:left;"/>-->
+		<!--			<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">豫公网安备 41102402000XXX号</p></a>-->
+		<!--	</div>-->
+	</footer>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test 1</title>
+</head>
+<body>
+	<a href="./index.html">首页</a>
+	<!-- 无序列表 ul (Un-order List) -->
+	<!-- 列表项 li (List Item) -->
+	<ul>
+		<li>某一项</li>
+		<li>某一项</li>
+		<li>某一项</li>
+	</ul>
+	<hr>
+	<!-- 有序列表 ol (Order List)
+		reversed:指定列表倒序
+		start:指定列表编号起始值
+	-->
+	<ol>
+		<li>第一项</li>
+		<li>第二项</li>
+		<li>第三项</li>
+	</ol>
+	<hr>
+	<!-- 定义列表 / 描述列表 dl (Define List)
+		<dt>: 定义列表术语 Definition Terminology
+		<dd>: 定义列表内容 Definition Description
+		嵌套关系：dl > dt、dd
+	-->
+	<dl>
+		<dt>HTML</dt>
+		<dd>全称：HyperText Markup Language</dd>
+		<dd>中文：超文本标记语言</dd>
+		<dt>CSS</dt>
+		<dd>全称：Cascading Style Sheets</dd>
+		<dd>中文：层叠样式表</dd>
+		<dt>JavaScript</dt>
+		<dd>一种直译式脚本语言</dd>
+	</dl>
+	<hr>
+	<!-- 表格 table
+		#border: 表格边框
+		#width: 表格宽度
+		#height: 表格高度
+		<tr>: 行 Table Row
+		<th>: 表格头 Table Header Cell
+			rowspan: 纵跨行数
+			colspan: 横跨列数
+		<td>: 单元格 Table Data Cell
+			rowspan: 纵跨行数
+			colspan: 横跨列数
+		<caption>: 结构-表格标题
+		<thead>: 结构-表格头部 Table Header
+		<tfoot>: 结构-表格底部 Table Footer
+		<tbody>: 结构-表格主体 Table Body
+		嵌套关系: table > caption、thead、tfoot、tbody >tr > th、td
+		合并规律：上下合并只保留最上的、左右合并只保留最左的
+	-->
+	<table border="2">
+		<caption>成绩单</caption>
+		<thead>
+		<tr>
+			<th rowspan="2">姓名</th>
+			<th rowspan="2">性别</th>
+			<th colspan="3">成绩</th>
+			<!-- 被覆盖的th -->
+			<!-- 被覆盖的th -->
+		</tr>
+		<tr>
+			<!-- 被覆盖的th -->
+			<!-- 被覆盖的th -->
+			<th>语文</th>
+			<th>数学</th>
+			<th>总分</th>
+		</tr>
+		</thead>
+		<tfoot>
+		<tr>
+			<td colspan="2">最高分</td>
+			<!-- 被覆盖的td -->
+			<td>92</td>
+			<td>96</td>
+			<td>182</td>
+		</tr>
+		<tr>
+			<td colspan="5">总分第一：小刚</td>
+			<!-- 被覆盖的td -->
+			<!-- 被覆盖的td -->
+			<!-- 被覆盖的td -->
+			<!-- 被覆盖的td -->
+		</tr>
+		</tfoot>
+		<tbody>
+		<tr>
+			<td>小明</td><td>男</td><td>87</td><td>91</td><td>178</td>
+		</tr>
+		<tr>
+			<td>小红</td><td>女</td><td>84</td><td>96</td><td>180</td>
+		</tr>
+		<tr>
+			<td>小刚</td><td>男</td><td>92</td><td>90</td><td>182</td>
+		</tr>
+		</tbody>
+	</table>
+	<hr>
+	<!-- 表单域 form
+		action: 提交地址
+		<label>: 为表单元素定义标注 (包裹提示语+定义for属性 / 包裹提示语和表单元素)
+		--for: 规定 label 绑定到哪个表单元素
+		--form: 规定 label 字段所属的表单
+		<input>: 输入系列表单元素
+		--type: 属性值，不同属性值对应不同功能
+		----"text": 文本框
+		----"password": 密码框
+		----"radio": 单选框
+		----"checkbox": 多选框
+		----"file": 文件选择标签
+		----"submit": 提交按钮
+		----"reset": 重置按钮
+		----"button": 按钮标签
+		--name: 分组名，配合type实现同组单选框效果
+		--id:
+		--placeholder: 占位符，标签中的默认值（适用于type="text / password")
+		--checked: 默认选中（适用于type="radio / checkbox")
+		--multiple: 多文件选择（与type="file"配合使用)
+		--value: 标签元素设定值:
+			/*
+				type="button", "reset", "submit" - 定义按钮上的显示的文本
+				type="text", "password", "hidden" - 定义输入字段的初始值
+				type="checkbox", "radio", "image" - 定义与输入相关联的值
+			*/
+		<button>: 按钮表单元素
+		--type: 属性值(button / reset / submit)
+		<select>: 下拉列表表单元素
+		--<option>: 下拉列表选项
+		----selected: 默认选中该选项
+		<textarea>: 多行文本框表单元素
+		--cols: 列宽
+		--rows：行高
+	-->
+	<!-- div Division 块标签-->
+	<!-- span Span 行内标签 -->
+	<form action="#">
+		<div>
+			<label for="email">邮箱：</label>
+			<input id="email" type="text" value="@henu.edu.com">
+		</div>
+		<div>
+			<label for="uid">昵称：</label>
+			<input id="uid" type="text" placeholder="请输入用户名">
+		</div>
+		<div>
+			<label for="pwd">密码：</label>
+			<input id="pwd" type="password" placeholder="请输入密码">
+		</div>
+		<div>
+			<label for="avatar">头像：</label>
+			<input id="avatar" type="file">
+		</div>
+		<div>
+			<label for="city">城市：</label>
+			<select id="city">
+				<option>北京</option>
+				<option>上海</option>
+				<option>广州</option>
+				<option>郑州</option>
+				<option selected>开封</option>
+				<option>其他</option>
+			</select>
+		</div>
+		<div>
+			<span>身份：</span>
+			<span>
+				<input id="student" type="radio" name="gender" checked>
+				<label for="student">学生</label>
+			</span>
+			<span>
+				<input id="teacher" type="radio" name="gender">
+				<label for="teacher">教职工</label>
+			</span>
+		</div>
+		<div>
+			<label>
+				介绍：<textarea cols="20" rows="3"></textarea>
+			</label>
+		</div>
+		<div>
+			<span>
+				<input id="remember" type="checkbox">
+				<label for="remember">记住密码</label>
+			</span>
+			<span>
+				<input id="accepted" type="checkbox" checked>
+				<label for="accepted">我已阅读<a href="#">《许可协议》</a></label>
+			</span>
+		</div>
+		<div>
+			<input type="button" value="Back">
+			<input type="reset" value="Reset">
+			<input type="submit" value="Login">
+		</div>
+		<div>
+			<button type="button">返回</button>
+			<button type="reset">重置</button>
+			<button type="submit">登录</button>
+		</div>
+		<hr>
+	</form>
+	<footer>
+		<div style="width:300px;margin:0 auto; padding:20px 0;">
+			<p align="center">Zpss&copy版权所有</p>
+			<a target="_blank" href="https://beian.miit.gov.cn/"
+			   style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+				<p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">
+					备案号：豫ICP备2022027732号-1</p>
+			</a>
+		</div>
+		<!--	<div style="width:300px;margin:0 auto; padding:20px 0;">-->
+		<!--		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41102402000XXX" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">-->
+		<!--			<img src="./image/beian.png" style="float:left;"/>-->
+		<!--			<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">豫公网安备 41102402000XXX号</p></a>-->
+		<!--	</div>-->
+	</footer>
+</body>
+</html>
