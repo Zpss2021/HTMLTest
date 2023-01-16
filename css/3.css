@@ -1,0 +1,35 @@
+.size_50px {
+	font-size: 50px;
+	/* 文字大小 : 数字+单位
+		单位：
+		px: 像素pixel
+		em：
+		...
+	*/
+}
+
+.weight_bold {
+	font-weight: bold;
+	/* 文字粗细
+		取值： 100 200 300 400(normal) 500 600 700(bold) 800 900
+	 	@不是所有字体都有100-900九种粗细，因此更多用normal/bold & 400/700控制字体粗细
+	 */
+}
+
+.style_italic {
+	font-style: italic;
+	/* 	文字样式
+		normal 正常 / italic 斜体（使用字体自带效果） / oblique 倾斜
+	*/
+}
+.family_song {
+	font-family: 宋体;
+	/* 文字字体 */
+}
+.family_hei {
+	font-family: 黑体, 微软雅黑, Arial, sans-serif;
+	/* 设定多个字体，用逗号分割
+		@使用优先级从前到后
+		@在最后添加通用字体,如serif（有衬线任意），sans-serif（无衬线任意）
+	*/
+}
