@@ -1,10 +1,10 @@
 .size_50px {
 	font-size: 50px;
-	/* 文字大小 : 数字+单位
-		单位：
-		px: 像素pixel
-		em：
-		...
+	/* 文字大小 :
+		绝对大小值: xx-small x-small small medium large x-large xx-large
+		相对大小值（相对父元素）:larger smaller
+		长度值: px（pixels 像素） em（相对父元素） rem（相对根元素）
+		百分比值： % （相对父元素）
 	*/
 }
 
@@ -22,14 +22,37 @@
 		normal 正常 / italic 斜体（使用字体自带效果） / oblique 倾斜
 	*/
 }
+
 .family_song {
 	font-family: 宋体;
 	/* 文字字体 */
 }
+
 .family_hei {
-	font-family: 黑体, 微软雅黑, Arial, sans-serif;
+	font-family: 黑体, 微软雅黑, "Arial Black", sans-serif;
 	/* 设定多个字体，用逗号分割
 		@使用优先级从前到后
-		@在最后添加通用字体,如serif（有衬线任意），sans-serif（无衬线任意）
+		@在最后添加通用字体,如serif（有衬线任意字体），sans-serif（无衬线任意字体）
+		@字体名有空格分开的用双引号包裹
 	*/
+}
+
+.fonts {
+	font-family: 黑体; /* 被font覆盖不会起作用 */
+	font: italic bold 20px 宋体;
+	/* 字体复合属性 font
+		格式：（只能省略前两个）
+		font: 斜体、粗体、大小、字体
+		font: style weight 	size family
+		font: 		weight 	size family
+		font: style 		size family
+		font:  				size family
+	 */
+	font-style: normal;
+	/* @CSS 层叠特性：生效的是最下面的 */
+	/* @因此font复合属性与单一属性同时设置时，将单一属性放在下面 */
+}
+
+.indent_2em {
+	text-indent: 2em;
 }
