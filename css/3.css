@@ -48,6 +48,7 @@
 		font: style 		size family
 		font:  				size family
 	 */
+	/*	其他形式 font: style weight size/line-height family;	*/
 	font-style: normal;
 	/* @CSS 层叠特性：生效的是最下面的 */
 	/* @因此font复合属性与单一属性同时设置时，将单一属性放在下面 */
@@ -55,4 +56,46 @@
 
 .indent_2em {
 	text-indent: 2em;
+}
+
+.align_center {
+	text-align: center;
+	/* 段落对齐：left 左对齐、 center 居中对齐、 right 右对齐*/
+}
+
+.align_right {
+	text-align: right;
+}
+
+.decoration_underline {
+	text-decoration: underline;
+	/* 文本修饰：
+		underline 下划线
+		line-through 删除线
+		overline 上划线
+		none 无修饰，常用于去除超链接下划线
+	*/
+}
+
+.decoration_line_through {
+	text-decoration: line-through;
+}
+
+.decoration_overline {
+	text-decoration: overline;
+}
+
+.decoration_none {
+	text-decoration: none;
+}
+
+.line_height_30px {
+	font-size: 20px;
+	line-height: 1.5;
+	/* 行高
+		内容：normal、长度、数字、百分比、em(不推荐)
+		行距 = line-height - font-size
+		- 这里行高 line-height = 1.5 * font-size = 30px
+		- 行距 = line-height - font-size = 30px - 20px = 10px
+	 */
 }

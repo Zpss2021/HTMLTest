@@ -1,0 +1,139 @@
+body {
+	background-color: #F5F5F5;
+	font-family: 微软雅黑, sans-serif;
+}
+
+.container {
+	height: 300px;
+	width: 234px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* 后代选择器：选择器1 和 选择器2 用空格隔开
+ 	描述：选择器2在选择器1所选标签的所有后代中做选择
+ 	- 这里选择.container类中的img标签
+ */
+.container img {
+	width: 160px;
+	margin: 20px 0;
+}
+
+.name {
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.info {
+	color: #CCC;
+	font-size: 12px;
+	height: 30px;
+}
+
+.price {
+	font-size: 14px;
+	color: #FFA500;
+}
+
+.list {
+	width: 10em;
+}
+
+/* 后代选择器：选择器1 选择器2 （用空格隔开）
+	描述：选择器2在选择器1所选标签的所有后代中做选择
+ 	- 这里选择.list类所有后代中的li标签
+*/
+.list li {
+	color: darkseagreen;
+}
+
+/* 子代选择器：选择器1 > 选择器2
+	描述：选择器2在选择器1所选标签的所有子代中做选择
+	@ 子代选择器仅在选择器1所选父元素的儿子代中选择
+	- 这里选择.list类儿子一代中的li标签
+*/
+.list > li {
+	color: cornflowerblue;
+}
+
+/* 并集选择器：选择器1 , 选择器2
+	描述：同时选择多组标签设置样式
+ */
+th, td {
+	border: 1px solid black;
+}
+
+.border_dash {
+	border: 1px dashed black;
+}
+
+/* 交集选择器：标签选择器类选择器 或标签选择器id选择器 (例： a.class_b、a#id_b)
+	描述：常用来选择区分有相同类名的不同标签
+ */
+table.border_dash {
+	border-radius: 10%;
+}
+
+/*	伪类选择器
+	- 动态伪类
+		- :link: 未访问的链接样式
+		- :visited: 已访问的链接样式
+		- :hover: 鼠标经过效果
+		- :active: 激活效果
+	- 目标伪类 :target
+	- 语言伪类 :lang()
+	- 元素状态伪类
+		- :enabled
+		- :disabled
+		- :checked
+	- 结构伪类
+		- :nth-child()
+			- :nth-child(n)是父元素中的第n个子元素 (n代表非负整数)
+			- :nth-child(2n)是父元素中的第偶数个子元素
+			- :nth-child(2n+1)是父元素中的第奇数个子元素
+			- :nth-child(even)是父元素中的第偶数个子元素
+			- :nth-child(odd)是父元素中的第奇数个子元素
+		- :nth-last-child()
+			- @用法与:nth-child()类似，不同的是:nth-last-child()从最后一个子元素开始往前计数
+		- :nth-of-type()
+			- @用法与:nth-child()类似，不同的是其仅计数同种类型的元素
+		- nth-last-of-type()
+			- @用法与:nth-of-type()类似，不同的是:nth-last-of-type()从最后一个子元素开始往前计数
+		- :first-child：等同于:nth-child(1)
+		- :last-child：等同于:nth-last-child(1)
+		- :first-of-type：等同于:nth-of-type(1)
+		- :last-of-type：等同于:nth-last-of-type(1)
+		- :only-child：父元素中唯一的子元素
+		- :only-of-type：父元素中唯一此类型的子元素
+		- :root：根元素，即html元素
+		- :empty：代表内容完全空白的元素
+	- 否定伪类 :not()
+		- 格式是:not(x)
+			- x是一个简单选择器（元素选择器、通用选择器、属性选择器、类选择器、id选择器、伪类（除否定伪类））
+		- 表示除x以外的元素
+ */
+.color_btn {
+	width: 10em;
+	height: 4em;
+}
+
+.color_btn:hover {
+	background-color: chartreuse;
+}
+
+.color_btn:active {
+	background-color: red;
+}
+
+.table tr:first-of-type {
+	background-color: aquamarine;
+}
+
+.table tr td:empty {
+	background-color: red;
+}
+
+.table tr:nth-child(2n) {
+	background-color: #CCCCCC;
+}
