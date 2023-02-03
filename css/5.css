@@ -1,0 +1,86 @@
+.bgc {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 10px;
+}
+
+.div1 {
+	background-color: orangered;
+	/* 背景颜色
+		取值：关键字、rgb()、rgba()、十六进制
+		默认：透明 rgba(0, 0, 0, 0) transparent
+	*/
+}
+
+.div2 {
+	background-color: #FFFF00;
+}
+
+.div3 {
+	background-color: rgb(0, 255, 255);
+}
+
+.div4 {
+	background-color: rgba(255, 0, 255, 50%);
+	/* @50%也可以简写成 0.5 或 .5 )*/
+}
+
+.bgi {
+	width: 150px;
+	height: 150px;
+	float: left;
+	color: red;
+	background-color: wheat;
+	margin: 10px;
+}
+
+.div5 {
+	clear: left;
+	background-image: url('../img/baidu_icon.png');
+	/* 背景图片
+		默认效果：平铺
+		取值：url()
+	 */
+	/* @bg-color与bg-img同时存在时，img在上 */
+}
+
+.div6 {
+	background-image: url('../img/baidu_icon.png');
+	background-repeat: repeat-x;
+	/* 背景重复
+		默认效果： repeat 平铺
+		取值：repeat no-repeat repeat-x repeat-y
+	 */
+}
+.div7 {
+	background-image: url('../img/baidu_icon.png');
+	background-repeat: repeat-y;
+	background-position: center;
+	/* 背景位置
+		默认值：left top 或 0 0
+		取值：
+			- 坐标 x y
+			- 方位名词
+			-- 水平left、center、right
+			-- 垂直top center bottom
+			@各格式可混合使用
+	 */
+}
+
+.div8 {
+	background-image: url('../img/baidu_icon.png');
+	background-repeat: no-repeat;
+	background-position: 100px 100px;
+}
+
+.bg{
+	clear:both;
+	width: 400px;
+	height: 400px;
+	background: cornflowerblue url(../img/minecraft_alpha_pic.jpg) repeat-x bottom center/ 100px;
+	/* 背景复合属性
+		格式：background:<color> <image> <repeat> <position> [/<bg-size>] @不限顺序
+		@复合属性与单独属性搭配使用：要么写在复合属性里面，要么写在复合属性下面
+	 */
+}
