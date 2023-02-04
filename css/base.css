@@ -1,0 +1,29 @@
+* {
+	font-family: 微软雅黑, 黑体, "Arial Black", sans-serif;
+}
+
+.beian {
+	width:300px;
+	margin:0 auto;
+	padding:20px 0;
+	text-align: center;
+}
+
+.beian a{
+	display:inline-block;
+	text-decoration:none;
+	height:20px;
+	line-height:20px;
+}
+
+.beian a p{
+	float:left;
+	height:20px;
+	line-height:20px;
+	margin: 0 0 0 5px;
+	color:#939393;
+}
+
+.beian a img{
+	float:left;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test 6</title>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/6.css">
+</head>
+<body>
+	<h1>块元素:</h1>
+	<p>代表标签：div p form table h1 hr ol ul pre</p>
+	<div class="block">1、元素独占一行</div>
+	<div class="block outer">
+		【父元素】
+		<div class="block inner">2、默认宽度与父元素相同、高度由内容撑开</div>
+	</div>
+	<div class="block square">3、可以设置宽高和内外边距</div>
+	<div class="block">4、可容纳块元素、行内元素、行内块元素和文本等</div>
+	<!--
+		块级元素作为大容器，一般可以嵌套任何元素
+		但需注意语义：p h1~h6 div 中不能嵌套其他块级元素
+	-->
+	<h1>行内元素:</h1>
+	<p>代表元素：span a b i br img cite code</p>
+	<span class="inline">1、元素可在一行</span>
+	<span class="inline">2、遇父级元素边界换行，宽高由内容撑开</span>
+	<br>
+	<span class="inline square">3、不可以设置宽高和内外边距</span>
+	<span class="inline">4、仅能容纳行内元素、行内块元素或文本</span>
+	<!--
+		若在HTML文件中换行，表现为两相邻行内元素间有空隙；
+		解决方法：
+		- 将父级字体大小设为0px，子级字体重新设置
+		- 用注释连接两行
+	-->
+	<!--
+		行内元素可以嵌套行内元素、行内块元素
+		例外：a中可嵌套除了a的任何元素
+	-->
+	<h1>行内块元素：</h1>
+	<p>代表标签：input textarea button select img(有其特点)</p>
+	<button class="inline_block">1、</button>
+	<button class="inline_block">元素可在一行</button>
+	<div class="block outer">
+		【父元素】
+		<button class="inline_block">2、遇父级元素边界换行，宽高由内容撑开</button>
+	</div>
+	<button class="inline_block square">3、可以设置宽高和内外边距</button>
+	<div class="inline square">div转行内元素1</div>
+	<span class="inline_block square">span转行内块元素</span>
+	<div class="inline square">div转行内元素2</div>
+	<span class="block square">span转块元素</span>
+	<footer>
+		<hr>
+		<div class="beian">
+			<p>Zpss&copy版权所有</p>
+			<a target="_blank" href="https://beian.miit.gov.cn/">
+				<p>豫ICP备2022027732号-1</p>
+			</a>
+			<a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41020202000157">
+				<img src="./img/beian.png" alt="beian">
+				<p>豫公网安备 41020202000157号</p>
+			</a>
+		</div>
+	</footer>
+</body>
+</html>

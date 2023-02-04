@@ -1,0 +1,33 @@
+.block {
+	display: block;
+	/* 元素显示模式
+		取值：block、inline、inline-block
+	*/
+	background-color: cornflowerblue;
+	text-align: center;
+}
+
+.outer {
+	width: 200px;
+	height: 100px;
+	background-color: darkseagreen;
+}
+
+.inner {
+	background-color: orange;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+}
+
+.inline {
+	display: inline;
+	background-color: #ABE2AB;
+}
+
+.inline_block {
+	display: inline-block;
+	text-align: center;
+}
