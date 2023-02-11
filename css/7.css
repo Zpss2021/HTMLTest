@@ -1,0 +1,36 @@
+.nav a {
+	text-decoration: none;
+	width: 100px;
+	height: 50px;
+	background-color: cornflowerblue;
+	display: inline-block;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+}
+
+.nav a:hover {
+	background-color: #ABE2AB;
+}
+
+.nav_mc a{
+	text-decoration: none;
+	width: 120px;
+	height: 58px;
+	background: url('../img/minecraft_alpha_pic.jpg');
+	display: inline-block;
+	color: #DDD;
+	text-align: center;
+	line-height: 58px;
+}
+
+.nav_mc a:hover{
+	text-decoration: none;
+	width: 120px;
+	height: 58px;
+	background: url('../img/baidu_icon.png');
+	display: inline-block;
+	color: #000;
+	text-align: center;
+	line-height: 58px;
+}
