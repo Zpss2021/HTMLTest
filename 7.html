@@ -23,6 +23,15 @@
 		<a href="#">导航4</a>
 		<a href="#">导航5</a>
 	</div>
+	<div class="outer">
+		第一层第一层第一层
+		<div class="inner">第二层第二层第二层</div>
+	</div>
+	<p class="txt">.txt: 20px</p>
+	<p id="px10" class="txt">.txt: 10px</p>
+	<p id="px20" class="txt" style="font-size: 5px">.txt: 5px</p>
+	<!-- 行内式: 覆盖了#px20所设置的font-size:20px -> 5px -->
+	<p class="txt big" style="font-size: 5px">.txt: 30px</p>
 	<footer>
 		<hr>
 		<div class="beian">
