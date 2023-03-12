@@ -36,6 +36,9 @@
 }
 
 .div5 {
+	/* 清除浮动
+		取值：left right both
+	 */
 	clear: left;
 	background-image: url('../img/baidu_icon.png');
 	/* 背景图片
@@ -53,6 +56,7 @@
 		取值：repeat no-repeat repeat-x repeat-y
 	 */
 }
+
 .div7 {
 	background-image: url('../img/baidu_icon.png');
 	background-repeat: repeat-y;
@@ -74,8 +78,11 @@
 	background-position: 100px 100px;
 }
 
-.bg{
-	clear:both;
+.bg {
+	/* @父子级标签，子级浮动而父级未设置高度时，之后的标准流盒子会受影响
+	   @解决方法：清除浮动
+	 */
+	clear: both;
 	width: 400px;
 	height: 400px;
 	background: cornflowerblue url(../img/minecraft_alpha_pic.jpg) repeat-x bottom center/ 100px;
