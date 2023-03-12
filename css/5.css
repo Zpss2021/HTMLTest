@@ -117,6 +117,14 @@
 	background-position: 100px 100px;
 }
 
+.top {
+	width: fit-content;
+	padding: 2em;
+	background-color: #ABE2AB;
+	/* 清除浮动-overflow法 */
+	overflow: hidden;
+}
+
 .bottom {
 	width: 400px;
 	height: 400px;
@@ -125,6 +133,4 @@
 		格式：background:<color> <image> <repeat> <position> [/<bg-size>] @不限顺序
 		@复合属性与单独属性搭配使用：要么写在复合属性里面，要么写在复合属性下面
 	 */
-	overflow: hidden;
-	/* 清除浮动-overflow法 */
 }
