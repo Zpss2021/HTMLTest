@@ -17,6 +17,24 @@
 	background-color: #FFFF00;
 }
 
+/* 	   @父子级标签，子级浮动而父级未设置高度时，之后的标准流盒子会受影响
+	   @解决方法：清除浮动
+	   清除浮动的方法：
+	   --1.给父元素添加高度
+	   --2.额外标签法：在父元素内容最后添加一个(空)块级元素并设置clear:both
+	   --3.单伪元素清除法（父元素:after）
+	   --4.双伪元素清除法（父元素:before + 父元素:after）(也可解决外边距塌陷)
+	   --5.overflow法(父元素：overflow:hidden)
+*/
+
+/* 清除浮动-额外标签法 */
+.float_clear {
+	clear: both;
+	/* 清除浮动
+		取值：left right both
+	*/
+}
+
 .div3 {
 	background-color: rgb(0, 255, 255);
 }
@@ -24,6 +42,31 @@
 .div4 {
 	background-color: rgba(255, 0, 255, 50%);
 	/* @50%也可以简写成 0.5 或 .5 )*/
+}
+
+/* 清除浮动-单伪元素清除法 */
+.clearfix_single:after {
+	content: '';
+	display: block;
+	clear: both;
+	/* 以下两行可选（为兼容旧浏览器）*/
+	height: 0;
+	visibility: hidden;
+}
+
+/* 清除浮动(&解决外边距塌陷)-双伪元素清除法
+	.clearfix_double:before：防止外边距塌陷(block->table)
+	--@外边距塌陷：父子关系的两块级标签，子级加margin会影响父级的位置
+	.clearfix_double:after：起浮动清除作用
+*/
+.clearfix_double:before {
+	content: '';
+	display: table;
+}
+.clearfix_double:after {
+	content: '';
+	display: table;
+	clear: both;
 }
 
 .bgi {
@@ -36,10 +79,6 @@
 }
 
 .div5 {
-	/* 清除浮动
-		取值：left right both
-	 */
-	clear: left;
 	background-image: url('../img/baidu_icon.png');
 	/* 背景图片
 		默认效果：平铺
@@ -78,11 +117,7 @@
 	background-position: 100px 100px;
 }
 
-.bg {
-	/* @父子级标签，子级浮动而父级未设置高度时，之后的标准流盒子会受影响
-	   @解决方法：清除浮动
-	 */
-	clear: both;
+.bottom {
 	width: 400px;
 	height: 400px;
 	background: cornflowerblue url(../img/minecraft_alpha_pic.jpg) repeat-x bottom center/ 100px;
@@ -90,4 +125,6 @@
 		格式：background:<color> <image> <repeat> <position> [/<bg-size>] @不限顺序
 		@复合属性与单独属性搭配使用：要么写在复合属性里面，要么写在复合属性下面
 	 */
+	overflow: hidden;
+	/* 清除浮动-overflow法 */
 }
