@@ -22,8 +22,8 @@
 	   清除浮动的方法：
 	   --1.给父元素添加高度
 	   --2.额外标签法：在父元素内容最后添加一个(空)块级元素并设置clear:both
-	   --3.单伪元素清除法（父元素:after）
-	   --4.双伪元素清除法（父元素:before + 父元素:after）(也可解决外边距塌陷)
+	   --3.单伪元素清除法（父元素::after）
+	   --4.双伪元素清除法（父元素::before + 父元素::after）(也可解决外边距塌陷)
 	   --5.overflow法(父元素：overflow:hidden)
 */
 
@@ -45,7 +45,7 @@
 }
 
 /* 清除浮动-单伪元素清除法 */
-.clearfix_single:after {
+.clearfix_single::after {
 	content: '';
 	display: block;
 	clear: both;
@@ -59,11 +59,11 @@
 	--@外边距塌陷：父子关系的两块级标签，子级加margin会影响父级的位置
 	.clearfix_double:after：起浮动清除作用
 */
-.clearfix_double:before {
+.clearfix_double::before {
 	content: '';
 	display: table;
 }
-.clearfix_double:after {
+.clearfix_double::after {
 	content: '';
 	display: table;
 	clear: both;
