@@ -361,3 +361,7 @@ h1 {
 	font-size: 12px;
 	line-height: 21px;
 }
+
+.footer .right a {
+	color: #00a4ff;
+}
