@@ -242,12 +242,12 @@ h1 {
 .goods li {
 	float: left;
 	font-size: 16px;
-	color: #050505;
 }
 
 .goods li a {
 	border-left: 1px solid #bfbfbf;
 	padding: 0 30px;
+	color: #050505;
 }
 
 .goods .interest {
