@@ -365,3 +365,16 @@ h1 {
 .footer .right a {
 	color: #666666;
 }
+
+/* 定位的hot标签（子绝父相） */
+.course .content li {
+	position: relative;
+}
+
+.course .content li .hot {
+	position: absolute;
+	top: 0;
+	right: -4px;
+	width: 40px;
+	height: 24px;
+}

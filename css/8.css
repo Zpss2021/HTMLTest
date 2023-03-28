@@ -1,0 +1,177 @@
+/* @CSS属性设置顺序：浮动/display/定位、盒子模型、文字样式 */
+
+hr {
+	margin-top: 50px;
+}
+
+.sun {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	border-radius: 50%;
+	box-shadow: 0 0 30px yellow;
+	margin: 10px;
+	text-align: center;
+	line-height: 200px;
+}
+
+.cloud {
+	/* 定位 position
+		--属性值：
+			static		静态定位（默认）
+			relative 	相对定位
+			absolute 	绝对定位
+			fixed 		固定定位
+		--相关属性：left right top bottom z-index 配合实现定位
+			@left&top 优先级高于 right&bottom
+		    @z-index：用于设置层级，值越大越靠上，默认为0
+		----相对定位：相对于自身原来的位置进行定位
+		    @特点：
+				改变位置参照原有位置；
+				占有原来的位置（不脱离文档流）；
+				不会影响其他元素的位置；
+				仍然具有标签原有的显示特点；
+	*/
+	position: relative;
+	left: 75px;
+	bottom: 50px;
+	width: 150px;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 20px skyblue;
+	text-align: center;
+	line-height: 50px;
+}
+
+.cloud_origin {
+	position: relative;
+	bottom: 50px;
+	width: 150px;
+	height: 50px;
+	background-color: blue;
+	border-radius: 50%;
+	box-shadow: 0 0 20px skyblue;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}
+
+.lbl {
+	/* 定位 position
+	----绝对定位：相对于最近的一个非静态定位的父级元素进行定位；
+			如果父级元素没有定位，则相对于body进行定位
+		@特点：
+			改变位置参照最近的一个已经定位的父级元素；
+			不占有原来的位置（脱离文档流）；
+			会影响其他元素的位置；
+			不具有标签原有的显示特点（改变原标签的显示模式，具备inline-block的特点）；
+	----固定定位：相对于浏览器窗口进行定位
+	*/
+	position: absolute;
+	top: 5px;
+	left: 200px;
+	height: 20px;
+	padding: 5px;
+	background-color: #ABE2AB;
+}
+
+/* 子绝父相 */
+.father_1 {
+	/* 父级：相对定位 */
+	position: relative;
+	left: 2em;
+	width: 800px;
+	background-color: cyan;
+}
+
+.son_1 {
+	/* 子级：绝对定位 */
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	height: 75px;
+	background-color: #fff;
+	text-align: center;
+	line-height: 75px;
+}
+
+/* 定位 & 居中 */
+.father_2 {
+	/* 父级：相对定位 */
+	position: relative;
+	left: 2em;
+	/* 相对定位时，此居中方法有效，且表现为与left&right的叠加 */
+	margin: 0 auto;
+	width: 1000px;
+	background-color: pink;
+}
+
+
+.son_2 {
+	position: absolute;
+	top: 20px;
+	/* margin: 0 auto;  绝对定位时，此居中方法无效 */
+	/*
+		实现：left取50% : 使移动到参照物（父级）的50%处
+		效果：表现为左边与父级中线对齐
+	*/
+	left: 50%;
+	background-color: greenyellow;
+	text-align: center;
+	line-height: 75px;
+}
+
+.son_3 {
+	position: absolute;
+	bottom: 20px;
+	/*
+		实现：left取50% & margin-left取负的一半盒子宽度
+	 	效果：居中
+	 */
+	left: 50%;
+	width: 400px;
+	margin-left: -200px;
+	background-color: darkseagreen;
+	text-align: center;
+	line-height: 75px;
+}
+
+.son_4 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	/* 位移 transform
+	 	-- 属性值：translate(x, y) 等
+	 	-- 应用：实现位移、旋转、缩放等
+	 	@这里与绝对定位left&top配合实现居中，相当于自适应的margin-top&margin-left
+	 */
+	transform: translate(-50%, -50%);
+	background-color: darkorange;
+	text-align: center;
+	line-height: 50px;
+}
+
+.center_box {
+	position: absolute;
+	/* top取50% & margin-top取负的一半盒子宽度 */
+	top: 50%;
+	/* left取50% & margin-left取负的一半盒子宽度 */
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -150px;
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+}
+
+.center_box_auto {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+	background-color: rgba(255, 0, 0, .7);
+}
+
