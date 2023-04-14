@@ -1,0 +1,253 @@
+/* border-radius 边框圆角
+	格式：border-radius: 半径值
+	常见取值：px、%
+	作用：将元素的四个角变成圆角，圆角的半径由半径值决定
+	赋值规则：从左上角开始，顺时针赋值；若未赋值则看其对角的值
+
+*/
+.box{
+	margin: 0 auto;
+	padding: 10px;
+	width: 300px;
+	height: 300px;
+}
+
+.color_pink {
+	background-color: pink;
+}
+
+.color_yellow {
+	background-color: yellow;
+}
+
+.color_blue {
+	background-color: blue;
+	color: white;
+}
+
+.color_red {
+	background-color: red;
+	color: white;
+}
+
+.radius_1value {
+	border-radius: 10px;
+}
+
+.radius_2value {
+	border-radius: 10px 40px;
+}
+
+.radius_3value {
+	border-radius: 10px 40px 80px;
+}
+
+.radius_4value {
+	border-radius: 10px 40px 80px 100px;
+}
+
+.radius_round {
+	width: 250px;
+	height: 250px;
+	background-color: aquamarine;
+	border-radius: 50%;		/* 取值为正方形盒子边长（或50%），可实现圆形效果 */
+	line-height: 250px;
+}
+
+.radius_capsule {
+	width: 400px;
+	height: 200px;
+	background-color: orange;
+	border-radius: 100px;	/* 取值为长方形盒子高度的一半，可实现胶囊形效果 */
+	line-height: 200px;
+}
+
+/* cursor 鼠标指针
+	格式：cursor: 光标类型
+	作用：设置鼠标指针的形状
+*/
+
+.cursor_default {
+	cursor: default;
+}
+
+.cursor_pointer {
+	cursor: pointer;
+}
+
+.cursor_text {
+	cursor: text;
+}
+
+.cursor_move {
+	cursor: move;
+}
+
+.cursor_wait {
+	cursor: wait;
+}
+
+.cursor_help {
+	cursor: help;
+}
+
+.cursor_not_allowed {
+	cursor: not-allowed;
+}
+
+.cursor_progress {
+	cursor: progress;
+}
+
+.cursor_crosshair {
+	cursor: crosshair;
+}
+
+.cursor_col_resize {
+	cursor: col-resize;
+}
+
+.cursor_row_resize {
+	cursor: row-resize;
+}
+
+.cursor_n_resize {
+	cursor: n-resize;
+}
+
+.cursor_e_resize {
+	cursor: e-resize;
+}
+
+.cursor_s_resize {
+	cursor: s-resize;
+}
+
+.cursor_w_resize {
+	cursor: w-resize;
+}
+
+.cursor_ne_resize {
+	cursor: ne-resize;
+}
+
+.cursor_nw_resize {
+	cursor: nw-resize;
+}
+
+.cursor_se_resize {
+	cursor: se-resize;
+}
+
+.cursor_sw_resize {
+	cursor: sw-resize;
+}
+
+.cursor_ew_resize {
+	cursor: ew-resize;
+}
+
+.cursor_ns_resize {
+	cursor: ns-resize;
+}
+
+.cursor_nesw_resize {
+	cursor: nesw-resize;
+}
+
+.cursor_nwse_resize {
+	cursor: nwse-resize;
+}
+
+.cursor_no_drop {
+	cursor: no-drop;
+}
+
+.cursor_copy {
+	cursor: copy;
+}
+
+.cursor_none {
+	cursor: none;
+}
+
+.cursor_context_menu {
+	cursor: context-menu;
+}
+
+.cursor_cell {
+	cursor: cell;
+}
+
+.cursor_vertical_text {
+	cursor: vertical-text;
+}
+
+.cursor_alias {
+	cursor: alias;
+}
+
+.cursor_zoom_in {
+	cursor: zoom-in;
+}
+
+.cursor_zoom_out {
+	cursor: zoom-out;
+}
+
+.cursor_grab {
+	cursor: grab;
+}
+
+.cursor_grabbing {
+	cursor: grabbing;
+}
+
+.cursor_all_scroll {
+	cursor: all-scroll;
+}
+
+/* 元素隐藏
+	1、visibility: hidden;	———— 隐藏元素，占据空间（不常用）
+	2、display: none;		———— 隐藏元素，不占据空间
+*/
+
+.vs_hide {
+	background-color: greenyellow;
+	visibility: visible;
+}
+
+.vs_hide:hover {
+	visibility: hidden;
+}
+
+.dp_none {
+	background-color: yellowgreen;
+	display: block;
+}
+
+.dp_none:hover {
+	display: none;
+}
+
+/* overflow 溢出效果
+	格式：overflow: 溢出效果
+	常见取值：visible（可见，默认效果）、hidden（隐藏）、scroll（滚动条常驻）、auto（滚动条自动）
+	作用：设置元素内容溢出时的效果
+*/
+
+.overflow_hidden {
+	overflow: hidden;
+}
+
+.overflow_scroll {
+	overflow: scroll;
+}
+
+.overflow_auto {
+	overflow: auto;
+}
+
+.overflow_visible {
+	overflow: visible;
+}

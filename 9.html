@@ -22,23 +22,54 @@
 	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
 	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
 	<div class="pink big_box left_top">固定定位：左上角</div>
-	<div class="pink big_box left_bottom">固定定位：左下角</div>
-	<div class="pink big_box right_top">固定定位：右上角</div>
-	<div class="pink big_box right_bottom">固定定位：右下角</div>
+	<div class="pink big_box right_center">固定定位：右居中</div>
 	<div class="skyblue middle_box abs">靠前的绝对定位：左上角</div>
 	<div class="green small_box abs">靠后的绝对定位：左上角</div>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
-	<p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+	<hr>
+	<div>
+		<img src="./img/baidu_icon.png" alt="1">
+		<label>
+			<input type="button" value="默认效果">
+		</label>
+	</div>
+	<hr>
+	<div class="vertical_align_test">
+		<img src="./img/baidu_icon.png" alt="1">
+		<label>
+			<input type="button" value="垂直对齐：居中">
+		</label>
+	</div>
+	<hr>
+	<div class="vertical_align_test">
+		<label>
+			<input type="text" placeholder="垂直对齐：居中">
+			<input type="button" value="提交">
+		</label>
+	</div>
+	<hr>
+	<span>默认效果：因默认为基线对齐，底部有多余高度</span>
+	<div class ="skyblue adapt_box">
+		<img src="./img/baidu_icon.png" alt="1">
+
+	</div>
+	<span>解决1：垂直对齐：居中</span>
+	<div class ="skyblue adapt_box vertical_align_test">
+		<img src="./img/baidu_icon.png" alt="baidu">
+	</div>
+	<span>解决2：显示方式：块元素</span>
+	<div class ="skyblue adapt_box">
+		<img class="block_display" src="./img/baidu_icon.png" alt="baidu">
+	</div>
+	<hr>
+	<p>常用：在父级盒子宽高确定的情况下，用vertical-align配合line-height实现非文字元素的垂直居中</p>
+	<p>默认效果（仅vertical-align）：</p>
+	<div class="green big_box">
+		<img src="./img/baidu_icon.png" alt="baidu">
+	</div>
+	<p>解决（vertical-align配合line-height）：</p>
+	<div class="green big_box vertical_align_test">
+		<img src="./img/baidu_icon.png" alt="baidu">
+	</div>
 <footer>
 	<hr>
 	<div class="beian">

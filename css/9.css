@@ -2,22 +2,16 @@
 .big_box {
 	width: 200px;
 	height: 200px;
-	text-align: center;
-	line-height: 200px;
 }
 
 .middle_box {
 	width: 200px;
 	height: 150px;
-	text-align: center;
-	line-height: 150px;
 }
 
 .small_box {
 	width: 200px;
 	height: 100px;
-	text-align: center;
-	line-height: 100px;
 }
 
 .pink {
@@ -55,22 +49,17 @@
 	top: 0;
 }
 
-.left_bottom {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-}
-
-.right_top {
-	position: fixed;
-	right: 0;
-	top: 0;
-}
-
 .right_bottom {
 	position: fixed;
 	right: 0;
 	bottom: 0;
+}
+
+.right_center {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 /* 元素层级问题
@@ -87,4 +76,44 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+/*
+	现象：浏览器遇到行内/行内块标签，会将其当作文字处理
+	结果：默认文字是按基线对齐的，导致显示上不同元素垂直方向不对齐
+	解决方案：设置垂直对齐方式
+		--vertical-align属性
+			--属性值：
+				baseline		基线对齐（默认）
+				top				顶部对齐
+				bottom			底部对齐
+				middle			中间对齐
+			--注意：
+				1.只有行内/行内块元素才能设置垂直对齐方式
+				2.只有设置了高度的行内/行内块元素才能设置垂直对齐方式
+*/
+
+input {
+	height: 50px;
+}
+
+.adapt_box {
+	width: 200px;
+}
+
+.vertical_align_test input {
+	box-sizing: border-box; /* 让行内块元素的宽度包含padding */
+	vertical-align: middle; /* 实现两个行内块元素的垂直居中对齐 */
+}
+
+.vertical_align_test img {
+	vertical-align: middle; /* 实现两个行内块元素的垂直居中对齐 */
+}
+
+.block_display {
+	display: block;
+}
+
+.green.big_box {
+	line-height: 200px;
 }
