@@ -206,6 +206,61 @@
 .cursor_all_scroll {
 	cursor: all-scroll;
 }
+/* 元素透明度 opacity
+	格式：opacity: 透明度值;
+	作用：设置元素的透明度
+	取值范围：0~1，0为完全透明，1为完全不透明
+	特点：会使元素所有内容变透明
+*/
+
+.mc_pic {
+	width: 64px;
+	height: 64px;
+}
+
+.opacity_00 {
+	opacity: 0;
+}
+
+.opacity_01 {
+	opacity: 0.1;
+}
+
+.opacity_02 {
+	opacity: 0.2;
+}
+
+.opacity_03 {
+	opacity: 0.3;
+}
+
+.opacity_04 {
+	opacity: 0.4;
+}
+
+.opacity_05 {
+	opacity: 0.5;
+}
+
+.opacity_06 {
+	opacity: 0.6;
+}
+
+.opacity_07 {
+	opacity: 0.7;
+}
+
+.opacity_08 {
+	opacity: 0.8;
+}
+
+.opacity_09 {
+	opacity: 0.9;
+}
+
+.opacity_10 {
+	opacity: 1;
+}
 
 /* 元素隐藏
 	1、visibility: hidden;	———— 隐藏元素，占据空间（不常用）
